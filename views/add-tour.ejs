@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm Tour</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Thêm Tour</h1>
+    </header>
+
+    <section>
+        <form action="/tours/add" method="POST">
+            <label for="name">Tên Tour</label>
+            <input type="text" name="name" id="name" required>
+
+            <label for="destination">Địa điểm</label>
+            <input type="text" name="destination" id="destination" required>
+
+            <label for="price">Giá</label>
+            <input type="number" name="price" id="price" required>
+
+            <button type="submit">Thêm Tour</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>Admin site - Thêm Tour</p>
+    </footer>
+</body>
+</html>

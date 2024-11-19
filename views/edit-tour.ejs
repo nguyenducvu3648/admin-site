@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chỉnh sửa Tour</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Chỉnh sửa Tour</h1>
+    </header>
+
+    <section>
+        <form action="/tours/edit/<%= tour._id %>" method="POST">
+            <label for="name">Tên Tour</label>
+            <input type="text" name="name" id="name" value="<%= tour.name %>" required>
+
+            <label for="destination">Địa điểm</label>
+            <input type="text" name="destination" id="destination" value="<%= tour.destination %>" required>
+
+            <label for="price">Giá</label>
+            <input type="number" name="price" id="price" value="<%= tour.price %>" required>
+
+            <button type="submit">Cập nhật Tour</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>Admin site - Chỉnh sửa Tour</p>
+    </footer>
+</body>
+</html>

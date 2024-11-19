@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Site - Quản lý Tour</title>
+    <link rel="stylesheet" href="/styles.css"> <!-- CSS -->
+</head>
+<body>
+    <header>
+        <h1>Admin Site - Quản lý Tour</h1>
+    </header>
+
+    <section>
+        <h2>Danh sách các tour</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Tên Tour</th>
+                    <th>Địa điểm</th>
+                    <th>Giá</th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% tours.forEach(tour => { %>
+                    <tr>
+                        <td><%= tour._id %></td>
+                        <td><%= tour.name %></td>
+                        <td><%= tour.destination %></td>
+                        <td><%= tour.price %></td>
+                        <td>
+                            <a href="/tours/edit/<%= tour._id %>">Sửa</a> | 
+                            <a href="/tours/delete/<%= tour._id %>">Xóa</a>
+                        </td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+        <a href="/tours/add">Thêm Tour</a>
+    </section>
+
+    <footer>
+        <p>Admin site - Quản lý Tour</p>
+    </footer>
+</body>
+</html>
